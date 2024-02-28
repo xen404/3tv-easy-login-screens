@@ -1,0 +1,17 @@
+{
+  "name": "3tv-easy-login-screens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass index.scss index.css",
+    "watch:css": "onchange index.scss -- npm run build:css"
+  },
+  "devDependencies": {
+    "@groot/falbala": "^0.9.14",
+    "node-sass": "^9.0.0",
+    "onchange": "^7.1.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
