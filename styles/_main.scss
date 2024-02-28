@@ -1,6 +1,10 @@
+$char-width: 1ch;
+$gap: .5*$char-width;
+$char-number: 6;
+$input-width: $char-number*($char-width + $gap) - $gap;
+
 html {
 	font-size: 62.5%;
-	/* scrollbar-gutter: stable both-edges; */
 }
 
 body {
@@ -38,9 +42,27 @@ body {
 		margin-top: 24px;
 
 		label {
-			margin-bottom: 24px;
 			font-size: 14px;
 		}
+
+		input {
+    		display: block;
+    		margin: 50px 0;
+    		border: none;
+			padding: 0;
+			width: $input-width;
+			background: repeating-linear-gradient(90deg, 
+			#979797 0, #979797 $char-width, 
+				transparent 0, transparent $char-width + $gap) 
+				0 100%/ #{$input-width + $gap} 2px no-repeat;
+			font-size: 50px;
+			letter-spacing: $gap;
+
+    		&:focus {
+    		    outline: none;
+    		    color: dodgerblue;
+    		}
+}
 
 		button {
 			text-align: center;

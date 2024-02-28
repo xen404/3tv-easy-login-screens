@@ -206,8 +206,7 @@ button {
       margin: 0; }
 
 html {
-  font-size: 62.5%;
-  /* scrollbar-gutter: stable both-edges; */ }
+  font-size: 62.5%; }
 
 body {
   margin: 0;
@@ -237,8 +236,19 @@ body {
     align-items: center;
     margin-top: 24px; }
     .content form label {
-      margin-bottom: 24px;
       font-size: 14px; }
+    .content form input {
+      display: block;
+      margin: 50px 0;
+      border: none;
+      padding: 0;
+      width: 8.5ch;
+      background: repeating-linear-gradient(90deg, #979797 0, #979797 1ch, transparent 0, transparent 1.5ch) 0 100%/9ch 2px no-repeat;
+      font-size: 50px;
+      letter-spacing: 0.5ch; }
+      .content form input:focus {
+        outline: none;
+        color: dodgerblue; }
     .content form button {
       text-align: center;
       width: 100%; }
