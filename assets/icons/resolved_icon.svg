@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>API status / indicators / resolved_icn@3x</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="API-status-/-indicators-/-resolved_icn" fill="#309AFF" fill-rule="nonzero">
+            <path d="M15.9845111,0 C24.7512101,0 32,7.24878993 32,16 C32,24.7666989 24.7512101,32 16,32 C7.24878993,32 0,24.7666989 0,16 C0,7.24878993 7.23330106,0 15.9845111,0 Z M21.4804901,8.57180498 L14.2604443,19.7596081 L10.107986,14.790047 L7.78049844,16.7175383 L14.5193548,24.9338009 L24.0469709,10.210933 L21.4804901,8.57180498 Z" id="success_icn-copy"></path>
+        </g>
+    </g>
+</svg>
