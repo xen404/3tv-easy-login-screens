@@ -36,6 +36,12 @@ body {
 		font-weight: 600;
 	}
 
+	.secondary-text {
+		color: var(--acc-title-gray);
+		font-size: 13px;
+		font-weight: 400;
+	}
+
 	form {
 		display: flex;
 		flex-direction: column;
