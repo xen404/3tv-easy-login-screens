@@ -82,16 +82,25 @@ body {
 			align-items: center;
 			border-bottom: solid 1px;
     		border-color: var(--border-gray);
-			padding: 17px 0;
+			padding: 10px 0;
+			padding-left: -20px;
 
 			&:last-child {
-				border-bottom: none; // Remove bottom border for last item
-				padding-bottom: 0; // Remove bottom margin for last item
+				border-bottom: none; 
+				padding-bottom: 0;
 			}
 
 			p {
-				padding-left: 14px;
+				padding-left: 10px;
 				font-size: 16px;
+			}
+
+			.icon {
+				// padding-left: -20px;
+			}
+			.icon::before {
+				font-size: 46px;
+				display: inline;
 			}
 		  }
 	}
