@@ -1159,25 +1159,36 @@ body {
     font-size: 13px;
     font-weight: 400; }
   .content form {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 24px; }
     .content form label {
-      font-size: 14px; }
-    .content form input {
-      display: block;
-      margin: 50px 0;
-      border: none;
+      font-size: 13px;
+      margin-bottom: 40px; }
+    .content form fieldset {
+      border: 0px solid;
+      margin: 0;
       padding: 0;
-      width: 8.5ch;
-      background: repeating-linear-gradient(90deg, #979797 0, #979797 1ch, transparent 0, transparent 1.5ch) 0 100%/9ch 2px no-repeat;
-      font-size: 50px;
-      letter-spacing: 0.5ch; }
+      margin-inline-start: 0;
+      margin-inline-end: 0; }
+      .content form fieldset > div {
+        display: flex; }
+        .content form fieldset > div > input:not(:last-child) {
+          margin-right: 15px; }
+    .content form input {
+      padding: 0px;
+      border: 0;
+      font-size: 30px;
+      width: 40px;
+      text-align: center;
+      border-bottom: solid 2px;
+      border-color: #979797; }
       .content form input:focus {
-        outline: none;
-        color: dodgerblue; }
+        outline: none; }
     .content form button {
+      margin-top: 50px;
       text-align: center;
       width: 100%; }
   .content ul {
@@ -1216,4 +1227,5 @@ body {
   --grey-text: #797979;
   --success-text: #5FA53F;
   --border-gray: #D8D8D8;
-  --acc-title-gray: #606060; }
+  --acc-title-gray: #606060;
+  --spacing: 8px; }

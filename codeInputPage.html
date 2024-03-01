@@ -34,9 +34,18 @@
             
 
 
-            <form class="form" id="code-form">
-                <label class="form-label" for="code-form">Um sich einzuloggen, geben Sie den Code ein, der auf deinem Fernseher zu sehen ist.</label>
-                <input class="form-input" type="text" id="code" name="code" value='123456' maxlength='6' />
+            <form id="code-form">
+                <label for="code-form">Um sich einzuloggen, geben Sie den Code ein, der auf deinem Fernseher zu sehen ist.</label>
+                <fieldset>
+                    <div>
+                      <input name='code' class='code-input' required/>
+                      <input name='code' class='code-input' required/>
+                      <input name='code' class='code-input' required/>
+                      <input name='code' class='code-input' required/>
+                      <input name='code' class='code-input' required/>
+                      <input name='code' class='code-input' required/>
+                    </div>
+                  </fieldset>
                 <button class="button button--blue" type="submit">Bestätigen</button>
             </form>
             <p class="help">Brauchen Sie Hilfe? <a>drei.tv/hilfe</a></p>
@@ -47,6 +56,8 @@
     <footer id="footer" class="footer">
 
     </footer>
+
+    <script src="codeInputPage.js"></script>
 </body>
 
 </html>
