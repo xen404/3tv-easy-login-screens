@@ -27,10 +27,19 @@ document.getElementById('code-form').addEventListener('submit', function(e) {
   });
   
 
-function onSubmit(e){
-  e.preventDefault()
-  const code = inputFields.map(({value})=>value).join('')
-  console.log(code)
+  function onSubmit(e) {
+    e.preventDefault();
+    
+    const codeInputs = document.querySelectorAll('.code-input');
+    const code = Array.from(codeInputs).map(input => input.value).join('');
+
+    const apiUrl = 'https://easylogin.dreitv.dev.k8s.internal/verify_code';
+    const queryParams = `?user_code=${encodeURIComponent(code)}`;
+    const url = apiUrl + queryParams;
+
+    const form = document.getElementById('code-form');
+    form.setAttribute('action', url);
+    form.submit();
 }
 
 const urlParams = new URLSearchParams(window.location.search);
