@@ -1,25 +1,22 @@
-const inputElements = [...document.querySelectorAll('input.code-input')]
+const inputFields = [...document.querySelectorAll('input.code-input')]
 
-inputElements.forEach((ele,index)=>{
-  ele.addEventListener('keydown',(e)=>{
+inputFields.forEach((inputField, index)=>{
+  inputField.addEventListener('keydown',(e)=>{
     // if the keycode is backspace & the current field is empty
-    // focus the input before the current. Then the event happens
-    // which will clear the "before" input box.
-    if(e.keyCode === 8 && e.target.value==='') inputElements[Math.max(0,index-1)].focus()
+    // focus the input before the current. Then clear the previous input box.
+    if(e.keyCode === 8 && e.target.value==='') inputFields[Math.max(0,index-1)].focus()
   })
-  ele.addEventListener('input',(e)=>{
-    // take the first character of the input
-    // this actually breaks if you input an emoji like 👨‍👩‍👧‍👦....
-    // but I'm willing to overlook insane security code practices.
+  inputField.addEventListener('input',(e)=>{
     const [first,...rest] = e.target.value
-    e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
-    const lastInputBox = index===inputElements.length-1
+    e.target.value = first ?? '' 
+
+    const lastInputBox = index===inputFields.length-1
     const didInsertContent = first!==undefined
+
     if(didInsertContent && !lastInputBox) {
-      // continue to input the rest of the string
-      inputElements[index+1].focus()
-      inputElements[index+1].value = rest.join('')
-      inputElements[index+1].dispatchEvent(new Event('input'))
+      inputFields[index+1].focus()
+      inputFields[index+1].value = rest.join('')
+      inputFields[index+1].dispatchEvent(new Event('input'))
     }
   })
 })
@@ -32,6 +29,17 @@ document.getElementById('code-form').addEventListener('submit', function(e) {
 
 function onSubmit(e){
   e.preventDefault()
-  const code = inputElements.map(({value})=>value).join('')
+  const code = inputFields.map(({value})=>value).join('')
   console.log(code)
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.has('error')) {
+  const errorMessage = document.createElement('p');
+  errorMessage.textContent = 'Der Kopplungscode wurde falsch eingegeben. Bitte geben Sie den Kopplungscode erneut ein.';
+  errorMessage.classList.add('error-message');
+
+  const contentSection = document.querySelector('.content');
+  contentSection.insertBefore(errorMessage, contentSection.querySelector('.content-title').nextSibling);
 }
