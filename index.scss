@@ -1,6 +1,6 @@
-@import "./node_modules/@groot/falbala/src/core/scss/fonts";
-@import "./node_modules/@groot/falbala/src/core/scss/button";
-@import "./node_modules/@groot/falbala/src/core/scss/typography";
-@import "./styles/header";
-@import "./styles/main";
-@import "./styles/variables";
+@use "./node_modules/@groot/falbala/src/core/scss/fonts";
+@use "./node_modules/@groot/falbala/src/core/scss/button";
+@use "./node_modules/@groot/falbala/src/core/scss/typography";
+@use "./styles/header";
+@use "./styles/main";
+@use "./styles/variables";
