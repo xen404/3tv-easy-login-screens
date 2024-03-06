@@ -7,7 +7,7 @@ inputFields.forEach((inputField, index)=>{
     if(e.keyCode === 8 && e.target.value==='') inputFields[Math.max(0,index-1)].focus()
   })
   inputField.addEventListener('input',(e)=>{
-    const [first,...rest] = e.target.value
+    const [first,...rest] = e.target.value.toUpperCase()
     e.target.value = first ?? '' 
 
     const lastInputBox = index===inputFields.length-1
